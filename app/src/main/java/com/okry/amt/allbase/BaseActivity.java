@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 
 /**
- * Created by MR on 14-3-20.
+ * Created by MR on 14-3-20..
  */
 public class BaseActivity extends FragmentActivity{
 
