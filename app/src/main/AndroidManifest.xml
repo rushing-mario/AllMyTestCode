@@ -8,8 +8,8 @@
     <uses-sdk android:minSdkVersion="9"/>
     <application
             android:name=".app.AMTApplication"
-            android:label="@string/app_name"
             android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
             >
         <activity
                 android:name="com.okry.amt.AllMyTest"
@@ -134,15 +134,15 @@
 
         <activity
                 android:name="com.okry.amt.process.AnotherProcessActivity"
-                android:process=":process1"
                 android:label="anotherProcess:Activity"
+            android:process=":process1"
                 >
 
         </activity>
         <activity
                 android:name="com.okry.amt.process.AnotherProcessActivity2"
-                android:process=".process2"
                 android:label="anotherProcess:Activity2"
+            android:process=".process2"
                 >
 
         </activity>
@@ -352,6 +352,15 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".thread.sync.RecursiveSyncMethod"
+            android:label="@string/CATEGORY_thread_sync_recursivesync">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.okry.category.ALL_MY_TEST" />
             </intent-filter>
         </activity>
 
