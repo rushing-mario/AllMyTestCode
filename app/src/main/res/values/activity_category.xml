@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="CATEGORY_quick">A_quick</string>
+    
+    <string name="CATEGORY_temp_helloworld">temp/HelloWorld</string>
+    <string name="CATEGORY_thread_threadpoolshutdown">thread/ThreadPoolShutdown</string>
+    <string name="CATEGORY_thread_callable">thread/CallableFuture</string>
+    <string name="CATEGORY_thread_jointhread">thread/JoinThread</string>
+    <string name="CATEGORY_animation_propertyanimation">animation/PropertyAnimation</string>
+    <string name="CATEGORY_animation_viewanimation">animation/ViewAnimation</string>
+    <string name="CATEGORY_process_processtest">process/ProcessTest</string>
+    <string name="CATEGORY_view_animlistview">view/AnimListView</string>
+    <string name="CATEGORY_view_magnifyingglass">view/MagnifyingGlass</string>
+    <string name="CATEGORY_view_dispatchtouch">view/Touch</string>
+    <string name="CATEGORY_view_seekbar">view/SeekBar</string>
+    <string name="CATEGORY_ui_popupwindow">ui/PopupWindow</string>
+    <string name="CATEGORY_ui_dialog_basesample">ui/Dialog/BaseSample</string>
+    <string name="CATEGORY_ui_dialog_themesample">ui/Dialog/ThemeSample</string>
+    <string name="CATEGORY_storage_internalstorage">storage/InternalStorage</string>
+    <string name="CATEGORY_storage_externalstorage">storage/ExternalStorage</string>
+    <string name="CATEGORY_storage_db">storage/Database</string>
+    <string name="CATEGORY_service_serviceTest">service/LongConsumeService</string>
+    <string name="CATEGORY_service_serviceTestInAnotherProcess">service/LongConsumeServiceInAnotherProcess</string>
+    <string name="CATEGORY_service_bindService">service/BindService</string>
+    <string name="CATEGORY_bitmap_maker">bitmap/BitmapMaker</string>
+    <string name="CATEGORY_bitmap_resize">bitmap/ResizeBitmapTest</string>
+    <string name="CATEGORY_bitmap_touchpaint">bitmap/TouchPaintTest</string>
+    <string name="CATEGORY_bitmap_canvaslayer_canvasTest">bitmap/CanvasTest</string>
+    <string name="CATEGORY_bitmap_compress">bitmap/compress</string>
+    <string name="CATEGORY_bitmap_convert">bitmap/BitmapConvertActivity</string>
+    <string name="CATEGORY_bitmap_jni">bitmap/BitmapJni</string>
+    <string name="CATEGORY_system_SystemInfo">system/SystemInfo</string>
+    <string name="CATEGORY_memory_MemoryLeak">memory/MemoryLeak</string>
+    <string name="CATEGORY_messagequeue_MessageQueueTest">messageQueue/MessageQueueTest</string>
+
+</resources>

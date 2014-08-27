@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.okry.amt.ui.touchevent.LogRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                              android:orientation="vertical"
+                                              android:tag="container"
+                                              android:layout_width="match_parent"
+                                              android:layout_height="match_parent"
+        >
+
+    <com.okry.amt.ui.touchevent.LogRelativeLayout
+            android:tag="child1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+    </com.okry.amt.ui.touchevent.LogRelativeLayout>
+
+    <com.okry.amt.ui.touchevent.LogRelativeLayout
+            android:tag="child2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        <com.okry.amt.ui.touchevent.LogRelativeLayout
+                android:tag="child2_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                ></com.okry.amt.ui.touchevent.LogRelativeLayout>
+
+        <com.okry.amt.ui.touchevent.LogRelativeLayout
+                android:tag="child2_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                ></com.okry.amt.ui.touchevent.LogRelativeLayout>
+    </com.okry.amt.ui.touchevent.LogRelativeLayout>
+
+    <com.okry.amt.ui.touchevent.LogRelativeLayout
+            android:tag="child3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        <com.okry.amt.ui.touchevent.LogRelativeLayout
+                android:tag="child3_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                ></com.okry.amt.ui.touchevent.LogRelativeLayout>
+
+        <com.okry.amt.ui.touchevent.LogRelativeLayout
+                android:tag="child3_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                ></com.okry.amt.ui.touchevent.LogRelativeLayout>
+    </com.okry.amt.ui.touchevent.LogRelativeLayout>
+
+    <com.okry.amt.ui.touchevent.LogRelativeLayout
+            android:tag="child4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+    </com.okry.amt.ui.touchevent.LogRelativeLayout>
+
+</com.okry.amt.ui.touchevent.LogRelativeLayout>

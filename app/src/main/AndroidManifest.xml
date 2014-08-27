@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.okry.amt"
+          android:versionCode="1"
+          android:versionName="1.0"
+        >
+
+    <uses-sdk android:minSdkVersion="9"/>
+    <application
+            android:name=".app.AMTApplication"
+            android:label="@string/app_name"
+            android:icon="@drawable/ic_launcher"
+            >
+        <activity
+                android:name="com.okry.amt.AllMyTest"
+                android:label="@string/app_name"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name="com.okry.amt.thread.ThreadPoolShutdownTestActivity"
+                android:label="@string/CATEGORY_thread_threadpoolshutdown"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name="com.okry.amt.animation.PropertyAnimationTest"
+                android:label="@string/CATEGORY_animation_propertyanimation"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name="com.okry.amt.animation.ViewAnimationTest"
+                android:label="@string/CATEGORY_animation_viewanimation"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".ui.AnimListViewActivity"
+                android:label="@string/CATEGORY_view_animlistview"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name="com.okry.amt.process.ActivityProcessMain"
+                android:label="@string/CATEGORY_process_processtest"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name="com.okry.amt.storage.ActivityInternalStorage"
+                android:label="@string/CATEGORY_storage_internalstorage"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name="com.okry.amt.storage.ActivityExternalStorage"
+                android:label="@string/CATEGORY_storage_externalstorage"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name="com.okry.amt.storage.db.ActivityDatabase"
+                android:label="@string/CATEGORY_storage_db"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name="com.okry.amt.service.ServiceTestActivity"
+                android:label="@string/CATEGORY_service_serviceTest"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name="com.okry.amt.service.ServiceTestInAnotherProcessActivity"
+                android:label="@string/CATEGORY_service_serviceTestInAnotherProcess"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+
+        </activity>
+
+        <activity
+                android:name="com.okry.amt.service.ServiceBindActivity"
+                android:label="@string/CATEGORY_service_bindService"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name="com.okry.amt.process.AnotherProcessActivity"
+                android:process=":process1"
+                android:label="anotherProcess:Activity"
+                >
+
+        </activity>
+        <activity
+                android:name="com.okry.amt.process.AnotherProcessActivity2"
+                android:process=".process2"
+                android:label="anotherProcess:Activity2"
+                >
+
+        </activity>
+        <activity
+                android:name="com.okry.amt.process.SameProcessActivity"
+                android:label="SameProcessActivity"
+                >
+        </activity>
+
+        <activity
+                android:name="com.okry.amt.ui.MagnifyingGlassViewActivity"
+                android:label="@string/CATEGORY_view_magnifyingglass"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name="com.okry.amt.bitmap.PicMakerActivity"
+                android:label="@string/CATEGORY_bitmap_maker"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".bitmap.jni.BitmapJniActivity"
+                android:label="@string/CATEGORY_bitmap_jni"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".bitmap.resize.ActivityBitmapResizeTest"
+                android:label="@string/CATEGORY_bitmap_resize"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".system.ActivitySystemInfo"
+                android:label="@string/CATEGORY_system_SystemInfo"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".bitmap.touchpaint.AlphaPicMakerActivity"
+                android:label="@string/CATEGORY_bitmap_touchpaint"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".bitmap.canvaslayer.CanvasActivity"
+                android:label="@string/CATEGORY_bitmap_canvaslayer_canvasTest"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".bitmap.compress.CompressBitmapRepeatly"
+                android:label="@string/CATEGORY_bitmap_compress"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".ui.touchevent.RelativeTouchDispatch"
+                android:label="@string/CATEGORY_view_dispatchtouch"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".memory.MemoryLeakTest"
+                android:label="@string/CATEGORY_memory_MemoryLeak"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".bitmap.bitmapconvert.BitmapConvertActivity"
+                android:label="@string/CATEGORY_bitmap_convert"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".messagequeue.MessageQueueTestActivity"
+                android:label="@string/CATEGORY_messagequeue_MessageQueueTest"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.seekbar.ScaledSeekBarActivity"
+            android:label="@string/CATEGORY_view_seekbar"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".thread.CallableFutureActivity"
+            android:label="@string/CATEGORY_thread_callable"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".thread.JoinThreadTestActivity"
+            android:label="@string/CATEGORY_thread_jointhread"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.popupwindow.PopupWindowMain"
+            android:label="@string/CATEGORY_ui_popupwindow"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.dialog.DialogMainActivity"
+            android:label="@string/CATEGORY_ui_dialog_basesample"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.dialog.EmbeddedDialogActivity"
+            android:label="EmbeddedDialogFragment"
+            >
+        </activity>
+
+        <activity
+            android:name=".ui.dialog.EmbeddedDialogActivityAsDialogTheme"
+            android:label="EmbeddedDialogFragmentAsDialog"
+            android:theme="@android:style/Theme.Dialog"
+            >
+        </activity>
+
+        <activity
+            android:name=".ui.dialog.ThemeDialogActivity"
+            android:label="@string/CATEGORY_ui_dialog_themesample"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.animhoriscroll.ActivitySample"
+            android:label="@string/CATEGORY_quick"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <service android:name=".service.ServicePrintLog"></service>
+        <service
+                android:name=".service.ServicePrintLogInAnotherProcess"
+                android:process="com.okry.amt.serviceProcess"
+                ></service>
+    </application>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+</manifest>
