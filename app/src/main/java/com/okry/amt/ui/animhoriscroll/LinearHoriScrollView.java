@@ -1,18 +1,17 @@
 package com.okry.amt.ui.animhoriscroll;
 
 import android.content.Context;
-import android.graphics.Interpolator;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
 import android.view.animation.AnticipateInterpolator;
+import android.view.animation.DecelerateInterpolator;
 import android.view.animation.OvershootInterpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
-
-import com.okry.amt.log.L;
 
 /**
  * Created by marui on 13-11-21.
@@ -70,8 +69,24 @@ public class LinearHoriScrollView extends HorizontalScrollView implements BaseHo
     }
 
     @Override
-    public void onRemove(int position) {
-        mContainer.removeViewAt(position);
+    public void onRemove(final int position) {
+        Animation anim = startDeleteAnim(position);
+        anim.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                mContainer.removeViewAt(position);
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+//                mContainer.removeViewAt(position);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
     }
 
     @Override
@@ -184,6 +199,28 @@ public class LinearHoriScrollView extends HorizontalScrollView implements BaseHo
             anim.setFillAfter(true);
             child.startAnimation(anim);
         }
+    }
+
+    private Animation startDeleteAnim(int index) {
+        View childToDelete = mContainer.getChildAt(index);
+        DecelerateInterpolator interpolator = new DecelerateInterpolator();
+        if (childToDelete != null) {
+            int lastVisible = getLastVisibleChildIndex();
+            if (lastVisible < mContainer.getChildCount() - 1) {
+                lastVisible++;//需要计算加上
+            }
+            for (int i = index + 1; i <= lastVisible; i++) {
+                View child = mContainer.getChildAt(i);
+                TranslateAnimation anim = new TranslateAnimation(0, -child.getWidth(), 0, 0);
+                anim.setDuration(600);
+                anim.setInterpolator(interpolator);
+                child.startAnimation(anim);
+                if (i == lastVisible) {
+                    return anim;
+                }
+            }
+        }
+        return null;
     }
 
     /**

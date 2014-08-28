@@ -3,6 +3,7 @@
     <string name="CATEGORY_quick">A_quick</string>
     
     <string name="CATEGORY_temp_helloworld">temp/HelloWorld</string>
+    <string name="CATEGORY_thread_sync_recursivesync">thread/sync/RecursiveSyncMethod</string>
     <string name="CATEGORY_thread_threadpoolshutdown">thread/ThreadPoolShutdown</string>
     <string name="CATEGORY_thread_callable">thread/CallableFuture</string>
     <string name="CATEGORY_thread_jointhread">thread/JoinThread</string>

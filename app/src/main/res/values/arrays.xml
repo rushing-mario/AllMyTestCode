@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="fruit">
+        <item>Lemon</item>
+        <item>Pear</item>
+        <item>avocado</item>
+        <item>cantaloupe</item>
+        <item>Banana</item>
+        <item>Grape</item>
+        <item>raisins</item>
+        <item>plum</item>
+        <item>apricot</item>
+        <item>nectarine</item>
+        <item>honeydew</item>
+        <item>orange</item>
+        <item>tangerine</item>
+        <item>guava</item>
+        <item>Golden_apple</item>
+    </string-array>
+
+</resources>

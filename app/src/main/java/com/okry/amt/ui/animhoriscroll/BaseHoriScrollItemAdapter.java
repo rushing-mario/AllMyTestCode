@@ -38,7 +38,23 @@ public abstract class BaseHoriScrollItemAdapter<T> {
                 mDataSetObserver.onRemove(position);
             }
         }
+    }
 
+    public void remove(T item) {
+        if (mList != null) {
+            int index = indexOf(item);
+            mList.remove(index);
+            if (mDataSetObserver != null) {
+                mDataSetObserver.onRemove(index);
+            }
+        }
+    }
+
+    private int indexOf(T item) {
+        for (int i = 0; i < mList.size(); i++) {
+            if (item.equals(mList.get(i))) return i;
+        }
+        return -1;
     }
 
     /**
@@ -60,16 +76,18 @@ public abstract class BaseHoriScrollItemAdapter<T> {
         mDataSetObserver = null;
     }
 
-    public interface HoriDataSetObserver{
-        public void onAdd(int position);
-        public void onRemove(int position);
-        public void onInvalidated();
-    }
-
-    public void notifyDataSetChange(){
-        if(mDataSetObserver != null){
+    public void notifyDataSetChange() {
+        if (mDataSetObserver != null) {
             mDataSetObserver.onInvalidated();
         }
+    }
+
+    public interface HoriDataSetObserver {
+        public void onAdd(int position);
+
+        public void onRemove(int position);
+
+        public void onInvalidated();
     }
 
 }
