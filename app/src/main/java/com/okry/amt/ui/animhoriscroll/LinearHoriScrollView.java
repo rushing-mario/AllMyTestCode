@@ -235,7 +235,7 @@ public class LinearHoriScrollView extends HorizontalScrollView implements BaseHo
         return lastVisible;
     }
 
-    private void deleteItemWithAnim(View delete) {
+    private void deleteItem(View delete) {
         mContainer.removeView(delete);
     }
 
@@ -249,7 +249,25 @@ public class LinearHoriScrollView extends HorizontalScrollView implements BaseHo
             final int containerWidth = mContainer.getWidth();
             if (mContainer.getChildCount() == 1) {
                 // 无移动动画
-                deleteItemWithAnim(childToDelete);
+                Animation disappearAnim = AnimationUtils.loadAnimation(getContext(), R.anim.delete_anim);
+                disappearAnim.setDuration(DELETE_ANIM_DURATION);
+                childToDelete.startAnimation(disappearAnim);
+                disappearAnim.setAnimationListener(new Animation.AnimationListener() {
+                    @Override
+                    public void onAnimationStart(Animation animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animation animation) {
+                        deleteItem(childToDelete);
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animation animation) {
+
+                    }
+                });
             } else if (containerWidth - width < visibleWidth) {
                 // 重新计算删除后的位置，进行动画
                 int lastAnimIndex = mContainer.getChildCount() - 1;
@@ -372,7 +390,7 @@ public class LinearHoriScrollView extends HorizontalScrollView implements BaseHo
         public void onAnimationEnd(Animation animation) {
             TranslateAnimation r = new TranslateAnimation(0, 0, 0, 0);
             animView.setAnimation(r);
-            deleteItemWithAnim(deleteView);
+            deleteItem(deleteView);
         }
 
         @Override
