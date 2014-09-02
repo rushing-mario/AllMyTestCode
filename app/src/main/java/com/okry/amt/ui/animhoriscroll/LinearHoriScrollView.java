@@ -6,6 +6,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.animation.AnticipateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.OvershootInterpolator;
@@ -13,11 +14,16 @@ import android.view.animation.TranslateAnimation;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 
+import com.okry.amt.R;
+
 /**
  * Created by marui on 13-11-21.
  */
 public class LinearHoriScrollView extends HorizontalScrollView implements BaseHoriScrollItemAdapter.HoriDataSetObserver {
 
+    private static final int TRANS_ANIM_DURATION = 450;
+    private static final int DELETE_ANIM_DURATION = 450;
+    private static final int EXPAND_ANIM_DURATION = 600;
     //
     private int mShowCount;//一屏显示的个数
     private float mHalfCount = .5f;//一屏显示的个数超出的部分
@@ -166,7 +172,7 @@ public class LinearHoriScrollView extends HorizontalScrollView implements BaseHo
         for (int i = firstVisible; i <= lastVisible; i++) {
             View child = mContainer.getChildAt(i);
             TranslateAnimation anim = new TranslateAnimation(expandPosition - child.getWidth() * i, 0, 0, 0);
-            anim.setDuration(600);
+            anim.setDuration(EXPAND_ANIM_DURATION);
             anim.setInterpolator(interpolator);
             child.startAnimation(anim);
         }
@@ -182,7 +188,7 @@ public class LinearHoriScrollView extends HorizontalScrollView implements BaseHo
         for (int i = firstVisible; i <= lastVisible; i++) {
             View child = mContainer.getChildAt(i);
             TranslateAnimation anim = new TranslateAnimation(0, expandPosition - child.getWidth() * i, 0, 0);
-            anim.setDuration(600);
+            anim.setDuration(EXPAND_ANIM_DURATION);
             anim.setInterpolator(interpolator);
             anim.setFillAfter(true);
             child.startAnimation(anim);
@@ -260,7 +266,7 @@ public class LinearHoriScrollView extends HorizontalScrollView implements BaseHo
                     int scrollBefore = getScrollX();
                     int scrollEnd = i < index ? 0 : child.getWidth();
                     TranslateAnimation anim = new TranslateAnimation(0, scrollBefore - scrollEnd, 0, 0);
-                    anim.setDuration(400);
+                    anim.setDuration(TRANS_ANIM_DURATION);
                     anim.setInterpolator(interpolator);
                     child.startAnimation(anim);
                     if (i == lastAnimIndex) {
@@ -285,7 +291,7 @@ public class LinearHoriScrollView extends HorizontalScrollView implements BaseHo
                     int scrollBefore = getScrollX();
                     int scrollEnd = i > index ? mContainer.getWidth() - getWidth() : mContainer.getWidth() - getWidth() - child.getWidth();
                     TranslateAnimation anim = new TranslateAnimation(0, scrollBefore - scrollEnd, 0, 0);
-                    anim.setDuration(400);
+                    anim.setDuration(TRANS_ANIM_DURATION);
                     anim.setInterpolator(interpolator);
                     child.startAnimation(anim);
                     if (i == lastAnimIndex) {
@@ -304,7 +310,7 @@ public class LinearHoriScrollView extends HorizontalScrollView implements BaseHo
                 for (int i = index + 1; i <= lastAnimIndex; i++) {
                     final View child = mContainer.getChildAt(i);
                     TranslateAnimation anim = new TranslateAnimation(0, -child.getWidth(), 0, 0);
-                    anim.setDuration(400);
+                    anim.setDuration(TRANS_ANIM_DURATION);
                     anim.setInterpolator(interpolator);
                     child.startAnimation(anim);
                     if (i == lastAnimIndex) {
@@ -357,7 +363,9 @@ public class LinearHoriScrollView extends HorizontalScrollView implements BaseHo
 
         @Override
         public void onAnimationStart(Animation animation) {
-            deleteView.setVisibility(View.INVISIBLE);
+            Animation anim = AnimationUtils.loadAnimation(getContext(), R.anim.delete_anim);
+            anim.setDuration(DELETE_ANIM_DURATION);
+            deleteView.startAnimation(anim);
         }
 
         @Override
