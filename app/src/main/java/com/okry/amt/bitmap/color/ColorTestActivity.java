@@ -2,6 +2,7 @@ package com.okry.amt.bitmap.color;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,15 +18,45 @@ import java.util.Arrays;
  */
 public class ColorTestActivity extends BaseActivity {
 
-    public static int changeSaturation(int color, float saturation) {
+    public static int changeHsb(int color, float h, float s, float b) {
         int[] rgb = new int[3];
         rgb[0] = Color.red(color);
         rgb[1] = Color.green(color);
         rgb[2] = Color.blue(color);
         float[] hsb = rgb2hsb(rgb[0], rgb[1], rgb[2]);
-        hsb[1] = saturation;
+        if (h >= 0 && h <= 360) hsb[0] = h;
+        if (s >= 0 && s <= 1) hsb[1] = s;
+        if (b >= 0 && b <= 1) hsb[2] = b;
         rgb = hsb2rgb(hsb[0], hsb[1], hsb[2]);
         return Color.rgb(rgb[0], rgb[1], rgb[2]);
+    }
+
+    public static int randomHsbColor(int color) {
+        int[] rgb = new int[3];
+        rgb[0] = Color.red(color);
+        rgb[1] = Color.green(color);
+        rgb[2] = Color.blue(color);
+        float[] hsb = rgb2hsb(rgb[0], rgb[1], rgb[2]);
+
+        float r = randomAB(0.8f, 1.2f);
+        Log.e("ColorTest", "randomRange:" + r);
+
+        hsb[0] = range(hsb[0] * r, 0, 359.99f);
+        hsb[1] = range(hsb[1] * r, 0, 1);
+        hsb[2] = range(hsb[2] * r, 0, 1);
+
+        rgb = hsb2rgb(hsb[0], hsb[1], hsb[2]);
+        return Color.rgb(rgb[0], rgb[1], rgb[2]);
+    }
+
+    private static float range(float value, float min, float max) {
+        if (value < min) value = min;
+        else if (value > max) value = max;
+        return value;
+    }
+
+    private static float randomAB(float a, float b) {
+        return (float) (a + Math.random() * (b - a));
     }
 
     public static float[] rgb2hsb(int rgbR, int rgbG, int rgbB) {
@@ -125,11 +156,33 @@ public class ColorTestActivity extends BaseActivity {
 
                 View ori = findViewById(R.id.color_ori);
                 ori.setBackgroundColor(color);
-                LinearLayout container = (LinearLayout) findViewById(R.id.color_container);
-                int count = container.getChildCount();
-                for (int i = 0; i < count; i++) {
-                    View child = container.getChildAt(i);
-                    child.setBackgroundColor(changeSaturation(color, 1f / count * i));
+
+                LinearLayout hcontainer = (LinearLayout) findViewById(R.id.h_container);
+                int hcount = hcontainer.getChildCount();
+                for (int i = 0; i < hcount; i++) {
+                    View child = hcontainer.getChildAt(i);
+                    child.setBackgroundColor(changeHsb(color, 360f / hcount * i, -1, -1));
+                }
+
+                LinearLayout scontainer = (LinearLayout) findViewById(R.id.s_container);
+                int scount = scontainer.getChildCount();
+                for (int i = 0; i < scount; i++) {
+                    View child = scontainer.getChildAt(i);
+                    child.setBackgroundColor(changeHsb(color, -1, 1f / scount * i, -1));
+                }
+
+                LinearLayout bcontainer = (LinearLayout) findViewById(R.id.b_container);
+                int bcount = bcontainer.getChildCount();
+                for (int i = 0; i < bcount; i++) {
+                    View child = bcontainer.getChildAt(i);
+                    child.setBackgroundColor(changeHsb(color, -1, -1, 1f / bcount * i));
+                }
+
+                LinearLayout hsbcontainer = (LinearLayout) findViewById(R.id.hsb_container);
+                int hsbcount = hsbcontainer.getChildCount();
+                for (int i = 0; i < hsbcount; i++) {
+                    View child = hsbcontainer.getChildAt(i);
+                    child.setBackgroundColor(randomHsbColor(color));
                 }
             }
         });

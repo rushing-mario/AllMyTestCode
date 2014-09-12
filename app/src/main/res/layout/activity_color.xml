@@ -58,7 +58,7 @@
         android:background="#ff00ff"></View>
 
     <LinearLayout
-        android:id="@+id/color_container"
+        android:id="@+id/h_container"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_marginTop="20dp"
@@ -137,5 +137,249 @@
 
 
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/s_container"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/b_container"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hsb_container"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#ff0000" />
+
+
+    </LinearLayout>
+
 
 </LinearLayout>
