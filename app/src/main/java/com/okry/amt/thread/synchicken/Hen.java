@@ -1,9 +1,17 @@
 package com.okry.amt.thread.synchicken;
 
+import android.util.Log;
+
 /**
  * 母鸡类
  */
 public class Hen {
+
+    String name;
+
+    public Hen(String name) {
+        this.name = name;
+    }
 
     /**
      * 下蛋
@@ -12,6 +20,13 @@ public class Hen {
      */
     public Egg lay() {
         Egg egg = new Egg();
+        // 休眠，模仿下蛋需要的时间
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        Log.i(FarmStory.TAG, name + " lays egg!");
         return egg;
     }
 
@@ -26,7 +41,7 @@ public class Hen {
 
         @Override
         public String toString() {
-            return "I'm an egg!";
+            return "Egg:" + Integer.toHexString(hashCode());
         }
 
     }

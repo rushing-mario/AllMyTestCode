@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="CATEGORY_quick">A_quick</string>
-    
+    <string name="CATEGORY_quick2">A_quick2</string>
+
     <string name="CATEGORY_temp_helloworld">temp/HelloWorld</string>
     <string name="CATEGORY_thread_sync_recursivesync">thread/sync/RecursiveSyncMethod</string>
     <string name="CATEGORY_thread_threadpoolshutdown">thread/ThreadPoolShutdown</string>
@@ -23,6 +24,7 @@
     <string name="CATEGORY_service_serviceTest">service/LongConsumeService</string>
     <string name="CATEGORY_service_serviceTestInAnotherProcess">service/LongConsumeServiceInAnotherProcess</string>
     <string name="CATEGORY_service_bindService">service/BindService</string>
+    <string name="CATEGORY_bitmap_color">bitmap/ColorTest</string>
     <string name="CATEGORY_bitmap_maker">bitmap/BitmapMaker</string>
     <string name="CATEGORY_bitmap_resize">bitmap/ResizeBitmapTest</string>
     <string name="CATEGORY_bitmap_touchpaint">bitmap/TouchPaintTest</string>

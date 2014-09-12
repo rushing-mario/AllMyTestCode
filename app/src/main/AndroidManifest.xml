@@ -364,6 +364,24 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".thread.synchicken.FarmStory"
+            android:label="@string/CATEGORY_quick2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.okry.category.ALL_MY_TEST" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".bitmap.color.ColorTestActivity"
+            android:label="@string/CATEGORY_bitmap_color">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.okry.category.ALL_MY_TEST" />
+            </intent-filter>
+        </activity>
+
         <service android:name=".service.ServicePrintLog"></service>
         <service
                 android:name=".service.ServicePrintLogInAnotherProcess"
