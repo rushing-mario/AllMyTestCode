@@ -131,9 +131,30 @@ public class ColorTestActivity extends BaseActivity {
                 (int) (b * 255.0)};
     }
 
+    private static int[] generateRandom(int from, int to) {
+
+        int[] nums = new int[to - from];
+        for (int i = from; i < to; i++) {
+            nums[i] = i;
+        }
+
+        for (int i = 0; i < nums.length * 2; i++) {
+            int r0 = (int) (Math.random() * (to - from));
+            int r1 = (int) (Math.random() * (to - from));
+            int tmp = nums[r0];
+            nums[r0] = nums[r1];
+            nums[r1] = tmp;
+        }
+
+        return nums;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Log.e("random", "" + generateRandom(0, 100));
+
         setContentView(R.layout.activity_color);
 
         Button btn = (Button) findViewById(R.id.color_change);
