@@ -382,9 +382,18 @@
             </intent-filter>
         </activity>
 
+        <!--<activity-->
+            <!--android:name=".temp.MyActivity"-->
+            <!--android:label="@string/CATEGORY_quick">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="com.okry.category.ALL_MY_TEST" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+
         <activity
-            android:name=".temp.MyActivity"
-            android:label="@string/CATEGORY_quick">
+            android:name=".thread.timer.TimerTaskActivity"
+            android:label="@string/CATEGORY_thread_timerTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="com.okry.category.ALL_MY_TEST" />

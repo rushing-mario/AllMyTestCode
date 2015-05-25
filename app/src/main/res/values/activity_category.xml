@@ -8,6 +8,7 @@
     <string name="CATEGORY_thread_threadpoolshutdown">thread/ThreadPoolShutdown</string>
     <string name="CATEGORY_thread_callable">thread/CallableFuture</string>
     <string name="CATEGORY_thread_jointhread">thread/JoinThread</string>
+    <string name="CATEGORY_thread_timerTask">thread/TimerTask</string>
     <string name="CATEGORY_animation_propertyanimation">animation/PropertyAnimation</string>
     <string name="CATEGORY_animation_viewanimation">animation/ViewAnimation</string>
     <string name="CATEGORY_process_processtest">process/ProcessTest</string>
