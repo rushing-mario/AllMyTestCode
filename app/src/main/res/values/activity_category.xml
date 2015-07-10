@@ -11,6 +11,8 @@
     <string name="CATEGORY_thread_timerTask">thread/TimerTask</string>
     <string name="CATEGORY_animation_propertyanimation">animation/PropertyAnimation</string>
     <string name="CATEGORY_animation_viewanimation">animation/ViewAnimation</string>
+    CATEGORY_view_translate
+    <string name="CATEGORY_view_translate">animation/ViewTranslate</string>
     <string name="CATEGORY_process_processtest">process/ProcessTest</string>
     <string name="CATEGORY_view_animlistview">view/AnimListView</string>
     <string name="CATEGORY_view_magnifyingglass">view/MagnifyingGlass</string>
@@ -35,6 +37,7 @@
     <string name="CATEGORY_bitmap_jni">bitmap/BitmapJni</string>
     <string name="CATEGORY_system_SystemInfo">system/SystemInfo</string>
     <string name="CATEGORY_memory_MemoryLeak">memory/MemoryLeak</string>
+    <string name="CATEGORY_io_NIO">io/NIO</string>
     <string name="CATEGORY_messagequeue_MessageQueueTest">messageQueue/MessageQueueTest</string>
 
 </resources>

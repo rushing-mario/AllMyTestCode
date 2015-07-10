@@ -5,7 +5,9 @@
           android:versionName="1.0"
         >
 
-    <uses-sdk android:minSdkVersion="9"/>
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21"/>
     <application
             android:name=".app.AMTApplication"
             android:icon="@drawable/ic_launcher"
@@ -395,8 +397,26 @@
             android:name=".thread.timer.TimerTaskActivity"
             android:label="@string/CATEGORY_thread_timerTask">
             <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".io.NioActivity"
+            android:label="@string/CATEGORY_io_NIO">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="com.okry.category.ALL_MY_TEST" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".animation.ViewTranslate"
+            android:label="@string/CATEGORY_view_translate">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.okry.category.ALL_MY_TEST"/>
             </intent-filter>
         </activity>
 
